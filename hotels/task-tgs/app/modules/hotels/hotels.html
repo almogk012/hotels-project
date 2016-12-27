@@ -1,0 +1,35 @@
+<div ng-init="init()">
+    <div id="flex-container">
+        <div id="searchHotelName">
+            <label>Search Hotel :</label>
+            <input class="form-control" type="text" ng-model="filterName">
+        </div>
+        <ul id="list-brand">
+            <li>
+                <label>Brands</label>
+            </li>
+            <div class="btn-group" role="group" >
+                <brand-box brand-item="brand"
+                           ng-repeat="brand in brandsJSON"
+                           ng-click="filterBrands(brand.txt)">
+                </brand-box>
+            </div>
+        </ul>
+    </div>
+    <div id="flex-container-second">
+        <ul id="list-hotel">
+            <hotel-box hotel-own="hotel" delete="delete(hotel)"
+                       ng-repeat="hotel in hotels
+         |filter:{name:filterName}
+         |brandFilter:brandF
+         |startFrom:(currentPage - 1) * pageSize
+         |limitTo: pageSize">
+            </hotel-box>
+        </ul>
+        <div id="paging">
+            <uib-pagination total-items="hotels.length" ng-model='currentPage' items-per-page='pageSize'
+                            boundary-links="true">
+            </uib-pagination>
+        </div>
+    </div>
+</div>

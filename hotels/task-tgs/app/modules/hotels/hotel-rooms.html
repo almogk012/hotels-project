@@ -1,0 +1,32 @@
+<div id="rooms" ng-init="getHotel()">
+    <h2>Hotel Rooms</h2>
+    <div ng-repeat="(key,value) in hotel.roomTypes">
+        <div id="room">
+            <label>Name :</label>
+            <span>{{value.name}}</span><br>
+            <label>Description :</label>
+            <span>{{value.description}}</span><br>
+            <label>maxAdults :</label>
+            <span>{{value.maxAdults}}</span><br>
+            <label>maxChild :</label>
+            <span>{{value.maxChild}}</span><br>
+            <label>maxGuests :</label>
+            <span>{{value.maxGuests}}</span><br>
+            <label>bathrooms :</label>
+            <span>{{value.bathrooms}}</span><br>
+            <label>bedrooms :</label>
+            <span>{{value.bedrooms}}</span><br>
+            <label>numberOfBeds :</label>
+            <span>{{value.numberOfBeds}}</span><br>
+            <label>room size :</label><br>
+            <label>size :</label>
+            <span>{{value.roomSize.size}}</span><br>
+            <label>unit :</label>
+            <span>{{value.roomSize.unit}}</span><br>
+            <div>
+                <img width="250" height="180" ng-src="{{value.images[0].txt}}" alt="">
+                <img width="250" height="180" ng-src="{{value.images[1].txt}}" alt="">
+            </div>
+        </div>
+    </div>
+</div>

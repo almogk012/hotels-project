@@ -1,0 +1,67 @@
+<div id="editForm" class="container" ng-init="getHotel()">
+    <div class="row">
+        <h2 class="page-header">Hotel details</h2>
+    </div>
+    <div class="col-sm-4">
+        <div class="thumbnail">
+            <img ng-src="{{hotel.images[0].url}}" alt="">
+        </div>
+    </div>
+    <div class="col-sm-8">
+        <div class="form-group">
+            <h4>
+                <label>Name :</label>
+                <span>{{hotel.name}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>City :</label>
+                <span>{{hotel.address.city}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>Address :</label>
+                <span>{{hotel.address.address}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>Country :</label>
+                <span>{{hotel.address.country}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>Star Rating :</label>
+                <span>{{hotel.details.starRating.txt}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>Brand :</label>
+                <span>{{hotel.details.brand.txt}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>Number of rooms :</label>
+                <span>{{hotel.details.numOfRooms}}</span>
+            </h4>
+        </div>
+        <div class="form-group">
+            <h4>
+                <label>Description :</label>
+                <p>
+                    {{hotel.description}}
+                </p>
+            </h4>
+        </div>
+    </div>
+    <form name="form" role="form">
+        <div class="form-actions">
+            <a ui-sref="hotels.edit({id:hotel._id})" class="btn btn-link">Edit</a>
+        </div>
+    </form>
+</div>

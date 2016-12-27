@@ -1,0 +1,84 @@
+#list-hotel  {
+    width: 100%;
+    list-style-type: none;
+}
+
+#hotel {
+    border: 1px solid #2b669a;
+    border-radius: 7%;
+    width: 209px;
+    margin: 4px;
+    text-align: center;
+}
+#hotel:hover{
+    background-color: #e2dcde;
+    cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+#list-brand {
+    list-style-type: none;
+    padding:0;
+    width: 86px;
+    border: #99c4f8 solid 1px;
+    border-radius: 5%;
+}
+#brands div:hover{
+    background-color: #cbc5c7;
+    transition: background-color 0.6s;
+    cursor: pointer;
+}
+
+#searchHotelName {
+    margin: 10px;
+}
+
+#flex-container {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+#flex-container-second{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#paging {
+    flex: 1 100%;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+#editForm img {
+    border-radius: 5%;
+}
+
+#divBtn {
+    position: relative;
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+
+#btn-remove {
+    padding: 2px !important;
+    bottom: 0;
+    right: 50%;
+}
+
+#rooms {
+    display: flex;
+    text-align: center;
+}
+
+#room {
+    border: solid #1b6d85 2px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5%;
+}
+
+#room img {
+    border-radius: 5%;
+}
